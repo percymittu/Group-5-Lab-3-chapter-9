@@ -10,5 +10,24 @@ window.addEventListener('load', function()
          highEle[i].addEventListener('focus',toggle)
          highEle[i].addEventListener('blur',toggle)
        }
+      function submitfun(event)
+       {
+         var reqIn = document.querySelectorAll('.required');
+         for(i=0;i<reqIn.length;i++)
+         {
+          if(reqIn[i].value == "")
+          {
+          event.preventDefault();
+          reqIn[i].classList.add("error");
+          }
+          else
+          {
+               reqIn[i].classList.remove("error");
+          }
+ 
+         }
+       }
+
+
       
 })
