@@ -27,6 +27,18 @@ window.addEventListener('load', function()
  
          }
        }
+       var form=document.getElementById("mainForm");
+       form.addEventListener("submit",submitfun);
+       form.addEventListener("reset",resetform);
+
+ function resetform()
+       {
+        var reqIn = document.querySelectorAll('.error');
+         for(i=0;i<reqIn.length;i++)
+         {
+          reqIn[i].classList.remove("error");
+         }
+       }
 
 
       
